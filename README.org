@@ -21,16 +21,21 @@ Babel block.  Belong the properties of the heading must be an entry
 
 *** Example
 
-;; *** TODO Drill
-;; SCHEDULED: <2015-06-10 Mi .+1d>
-;; :PROPERTIES:
-;; :STYLE:    habit
-;; :ID:       0a4dc8a2-2131-45d3-9f85-11034180bf69
-;; :LAST_REPEAT: [2015-06-09 Di 16:19]
-;; :EXECUTE:  drill
-;; :END:
-;; 
-;; #+NAME: drill
-;; #+begin_src emacs-lisp
-;; (org-drill)
-;; #+end_src
+*** TODO Drill
+#+begin_src orgmode
+SCHEDULED: <2015-06-10 Mi .+1d>
+:PROPERTIES:
+:STYLE:    habit
+:ID:       0a4dc8a2-2131-45d3-9f85-11034180bf69
+:LAST_REPEAT: [2015-06-09 Di 16:19]
+:EXECUTE:  drill
+:END:
+#+end_src
+
+#+begin_src orgmode
+#+NAME: drill
+#+begin_src emacs-lisp
+(org-drill)
+#+end_src
+#+end_src
+
