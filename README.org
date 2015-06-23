@@ -21,8 +21,8 @@ Babel block.  Belong the properties of the heading must be an entry
 
 *** Example
 
-*** TODO Drill
 #+begin_src orgmode
+* TODO Drill
 SCHEDULED: <2015-06-10 Mi .+1d>
 :PROPERTIES:
 :STYLE:    habit
@@ -33,9 +33,9 @@ SCHEDULED: <2015-06-10 Mi .+1d>
 #+end_src
 
 #+begin_src orgmode
-#+NAME: drill
-#+begin_src emacs-lisp
-(org-drill)
-#+end_src
+;#+NAME: drill
+;#+begin_src emacs-lisp
+;(org-drill)
+;#+end_src
 #+end_src
 
