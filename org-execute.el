@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t; -*-
+
 ;;; org-execute.el - Automating recurrent jobs
 ;;
 ;; Copyright (C) 2015 Michael Strey
@@ -52,19 +54,22 @@
 ;; To install:
 ;; (require 'org-execute)
 ;;
-;; 
 
 (require 'org)
 
+;;; Code:
+
 (defun org-execute-babel-below-heading ()
-  "Execute a named Babel block that is indicated in a property with the key :EXECUTE:"
+  "Execute a named Babel block that is indicated in a property with the key :EXECUTE:."
   (save-excursion
     (let* ((n (org-entry-get nil "EXECUTE"))
-	   (a (org-babel-find-named-block n)))
+           (a (org-babel-find-named-block n)))
       (when (and n a)
-	  (goto-char a)
-	  (org-babel-execute-maybe)))))
+        (goto-char a)
+        (org-babel-execute-maybe)))))
 
 (add-hook 'org-agenda-after-show-hook 'org-execute-babel-below-heading)
 
 (provide 'org-execute)
+
+;;; org-execute.el ends here
